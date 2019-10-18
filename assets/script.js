@@ -1,6 +1,12 @@
+var questions = [
+    new questions("")
+]
+
+
+
 //function for the quiz to run and pull answer with adding a score.
 function Quiz(questions) {
-    this.score =0;
+    this.score = 0;
     this.questions = questions;
     this.questionsIndex = 0;
 }

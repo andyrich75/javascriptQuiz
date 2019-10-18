@@ -1,11 +1,12 @@
+
 function populate() {
-    if(quiz.isEnded()); {
+    if(quiz.isEnded()) {
         showScore();
 
     }
 
     else {
-        var element = document.getElementById("questions");
+        var element = document.getElementById("question");
         element.innerHTML = quiz.getQuestionsIndex().text;
 
         var choices = quiz.getQuestionsIndex().choices;
@@ -36,9 +37,6 @@ function showProgress() {
          var element = document.getElementById("quiz");
          element.innerHTML = gameOverHTML;
  };
-
-
-
 
 // Setting the question with an array
 var questions = [
