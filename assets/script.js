@@ -1,8 +1,3 @@
-var questions = [
-    new questions("")
-]
-
-
 
 //function for the quiz to run and pull answer with adding a score.
 function Quiz(questions) {
@@ -11,16 +6,16 @@ function Quiz(questions) {
     this.questionsIndex = 0;
 }
 
-Quiz.prototype.getQuestionsIndex = function() {
+quiz.prototype.getQuestionsIndex = function() {
     return this.questions[this.questionsIndex];
 
 }
 
-Quiz.prototype.isEnded = function() {
+quiz.prototype.isEnded = function() {
     return this.questions.length === this.questionsIndex;
 }
 
-Quiz.prototype.guess = function(answer) {
+quiz.prototype.guess = function(answer) {
     if(this.getQuestionsIndex().correcAnswer(answer)) {
         this.score++;
     }

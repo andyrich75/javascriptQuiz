@@ -8,7 +8,7 @@ function populate() {
     else {
         var element = document.getElementById("question");
         element.innerHTML = quiz.getQuestionsIndex().text;
-
+        //show the choices.
         var choices = quiz.getQuestionsIndex().choices;
         for(var i = 0; i < choices.length; i++) {
             var element = document.getElementById("choices" + i);
@@ -28,7 +28,7 @@ function guess(id, guess) {
 
 function showProgress() {
     var currentQuestionNum = quiz.questionsIndex + 1;
-    var elemnt = document.getElementById("progress");
+    var element = document.getElementById("progress");
     element.innerHTML = "Questions" + currentQuestionNum + "of" + quiz.questions.length;
 }
  function showScore() {
