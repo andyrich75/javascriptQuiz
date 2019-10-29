@@ -31,3 +31,4 @@ function questions(title, choices, answer) {
 questions.prototype.correctAnswer = function(choices) {
     return choices === this.answer;
 }
+  console.log(choices)

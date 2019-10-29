@@ -33,7 +33,7 @@ function showProgress() {
 }
  function showScore() {
      var gameOverHTML = "<h1>Result</h1>";
-         gameOverHTML += "<h2 id="score"> Your Score: " + quiz.score + "</h2>";
+         gameOverHTML += "<h2 id = score" > "Your Score: " + quiz.score + "</h2>";
          var element = document.getElementById("quiz");
          element.innerHTML = gameOverHTML;
  };
