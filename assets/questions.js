@@ -1,72 +1,33 @@
-
-function populate() {
-    if(quiz.isEnded()) {
-        showScore();
-
-    }
-
-    else {
-        var element = document.getElementById("question");
-        element.innerHTML = quiz.getQuestionsIndex().text;
-        //show the choices.
-        var choices = quiz.getQuestionsIndex().choices;
-        for(var i = 0; i < choices.length; i++) {
-            var element = document.getElementById("choices" + i);
-            ekement.innerHTML = choices[i];
-            guess("btn" + i, choices[i]);
-        }
-        showProgress();
-    }
-};
-function guess(id, guess) {
-    var button = document.getElementById(id);
-    button.onclick - function() {
-        quiz.guess(guess);
-        populate();
-    }
-}
-
-function showProgress() {
-    var currentQuestionNum = quiz.questionsIndex + 1;
-    var element = document.getElementById("progress");
-    element.innerHTML = "Questions" + currentQuestionNum + "of" + quiz.questions.length;
-}
- function showScore() {
-     var gameOverHTML = "<h1>Result</h1>";
-         gameOverHTML += "<h2 id = score" > "Your Score: " + quiz.score + "</h2>";
-         var element = document.getElementById("quiz");
-         element.innerHTML = gameOverHTML;
- };
-
-// Setting the question with an array
+// this file only holds the questions of the quiz
 var questions = [
     {
-        title: "Commonly used data types DO NOT include:",
-        choices: ["strings", "booleans", "alerts", "numbers"],
-        answer: "alerts"  
+      title: "Types of for loops DO NOT include:",
+      choices: ["for", "foreach", "for of", "for the love of javascript"],
+      answer: "for the love of javascript"
     },
     {
-        title: "The condition in an if / else statement is enclosed within ____.",
-        choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-        answer: "parentheses"
+      title: "What HTML element is javascript put into?",
+      choices: ["<js>", "<java>", "<script>", "<javascripts>"],
+      answer: "<script>"
     },
     {
-        title: "Inside which HTML element do we put the JavaScript?",
-        choices: [ "javascript", "js", "scripting", "script"],
-        answer: "script"
+      title: "How do you change HTML in javascript?",
+      choices: [".innerHTML", ".changeThis", ".textContent", ".newText"],
+      answer: ".innerHTML"
     },
     {
-        title: "How do you create a function in JavaScript?",
-        choices: ["function = myFunction()", "function:myFunction()", "function myFunction()", "Any of the Above"],
-        answer: "function myFunction()"
+      title: "The javascript should be loaded in the _____?",
+      choices: ["body tag", "what javascript", "head tag", "title tag"],
+      answer: "body tag"
     },
     {
-        title: "How do you call a function named "myFunction"?",
-        choices: ["call myFunction()", "myFunction()", "call function myFunction()", "Any of the Above"]
-        answer: "myFunction()"
+      title: "Script file is called with _____?",
+      choices: ["href", "link", "javascript", "src"],
+      answer: "src"
+    },
+    {
+      title: "Which of these creates a function?",
+      choices: ["function MyFunction()", "function.Myfunction()", "function = MyFunction()", "function {Function()}"],
+      answer: "function MyFunction()"
     }
-];
- 
-var quiz = new Quiz(questions);
-
-populate();
+  ];
